@@ -18,7 +18,7 @@ server = Flask(__name__)
 def predictjson():
     # Process data
     data = request.json
-    # print(data)
+    print(data)
     inputData = np.array([
         data['alcohol'],
         data['volatile acidity'],
