@@ -7,7 +7,8 @@ from werkzeug.utils import secure_filename
 
 # Load model
 dir = os.getcwd()
-dt = joblib.load(os.path.join('rf1.joblib'))
+print('os.path.join(dir,'rf1.joblib')')
+dt = joblib.load(os.path.join(dir,'rf1.joblib'))
 
 # Create Flask
 server = Flask(__name__)
