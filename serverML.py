@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import numpy as np
-import load import joblib
+from load import joblib
 import pandas as pd
 import os
 from werkzeug.utils import secure_filename
