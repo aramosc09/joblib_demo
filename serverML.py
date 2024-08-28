@@ -19,14 +19,20 @@ def predictjson():
     # Process data
     data = request.json
     print(data)
-    inputData = np.array([
+    # inputData = np.array([
+    #     data['alcohol'],
+    #     data['volatile acidity'],
+    #     data['pH']
+    # ])
+
+    inputData = [
         data['alcohol'],
         data['volatile acidity'],
-        data['pH']
-    ])
+        data['pH'] 
+    ]
 
     # Predict using input & model
-    result = dt.predict([inputData.reshape(1, -1)])
+    result = dt.predict(inputData[0])
 
     # Send answer
     return jsonify({'Prediction': str(result[0])})
