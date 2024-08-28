@@ -14,7 +14,7 @@ dt = joblib.load(os.path.join(dir,'rf1.joblib'))
 server = Flask(__name__)
 
 # Define a route to send JSON data
-@server.route('/predictjson',method=['POST'])
+@server.route('/predictjson',methods=['POST'])
 def predictjson():
     # Process data
     data = request.json
