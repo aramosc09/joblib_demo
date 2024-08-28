@@ -26,7 +26,7 @@ def predictjson():
     ])
 
     # Predict using input & model
-    result = dt.predict([inputData.reshape(1,-1)])
+    result = dt.predict(inputData.reshape(1,-1))
 
     # Send answer
     return jsonify({'Prediction': str(result[0])})
