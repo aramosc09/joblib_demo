@@ -25,11 +25,11 @@ def predictjson():
     #     data['pH']
     # ])
 
-    inputData = [
+    inputData = [[
         data['alcohol'],
         data['volatile acidity'],
         data['pH'] 
-    ]
+    ]]
 
     # Predict using input & model
     result = dt.predict(inputData[0])
